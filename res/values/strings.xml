@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GerenciamentoReforma</string>
+    
+    <string name="ambiente_lista_nome_ambiente">Nome do ambiente</string>
+    <string name="ambiente_lista_adicionar">Adicionar</string>
+    <string name="ambiente_lista_item_aviso_estoque">ambiente em quantidade baixa</string>
+    <string name="ambiente_lista_item_aviso_cuidados">Verificar antes de vender</string>
+    
+    <string name="listagem_ambientes_titulo">Ambientes</string>
+   
+    <!-- Cadastro de ambientes -->
+    <string name="ambiente_edicao_titulo">Edição de Ambientes</string>
+    <string name="ambiente_cadastro_titulo">Cadastro de Ambientes</string>
+    <string name="ambiente_cadastro_nome">Nome:</string>
+    <string name="ambiente_cadastro_nome_dica">Ex: Sala, Quarto</string>
+    <string name="ambiente_cadastro_porta">Porta:</string>
+    <string name="ambiente_cadastro_porta_dica"></string>
+    <string name="ambiente_cadastro_janela">Janela:</string>
+    <string name="ambiente_cadastro_metragem">Metragem (m2)</string>
+    <string name="ambiente_cadastro_gravado_sucesso">O ambiente foi gravado com sucesso.</string>
+    <string name="ambiente_cadastro_excluido_sucesso">O ambiente foi excluído com sucesso.</string>
+    <string name="ambiente_cadastro_atualizado_sucesso">O ambiente foi atualizado com sucesso.</string>
+    <string name="ambiente_cadastro_data_vencimento">Data de Validade:</string>
+    <string name="ambiente_cadastro_salvar">Salvar</string>
+    <string name="ambiente_cadastro_cancelar">Cancelar</string>
+    <string name="ambiente_cadastro_descricao_erro">A descrição pode ter no máximo 300 caracteres.</string>
+    <string name="ambiente_cadastro_quantidade_erro">A quantidade é obrigatória.</string>
+    <string name="ambiente_cadastro_erro_titulo">Erro de Validação</string>
+    <string name="ambiente_cadastro_erro">Erro na validação do formulário de ambientes:</string>
+    <string name="ambiente_cadastro_excluir">Excluir</string>
+    <string name="menu_ambientes">Ambientes</string>
+    <string name="menu_servicos">Servicos</string>
+    
+</resources>

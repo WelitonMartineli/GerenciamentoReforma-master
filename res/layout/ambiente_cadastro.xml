@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://www.gueei.com/android-binding/"    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/labelNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ambiente_cadastro_nome" />
+
+    <EditText
+        android:id="@+id/nome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/ambiente_cadastro_nome_dica"
+        binding:text="Nome" >
+        <!-- binding:text > O conteúdo do observável Nome deve estar vinculado a esta caixa de texto -->
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/labelPorta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ambiente_cadastro_porta" />
+
+    <EditText
+        android:id="@+id/porta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        binding:text="Porta" />
+		<!-- binding:text > O conteúdo do observável Descricao deve estar vinculado a esta caixa de texto -->
+    
+    <TextView
+        android:id="@+id/labelJanela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ambiente_cadastro_janela" />		
+    
+    <EditText
+        android:id="@+id/janela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        binding:text="Janela" />
+    	<!-- binding:text > O conteúdo do observável Quantidade deve estar vinculado a esta caixa de texto -->
+
+    <TextView
+        android:id="@+id/labelMetragem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ambiente_cadastro_metragem" />		
+    
+    <EditText
+        android:id="@+id/metragem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        binding:text="Metragem" />
+    	<!-- binding:text > O conteúdo do observável Quantidade deve estar vinculado a esta caixa de texto -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/salvar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/ambiente_cadastro_salvar"
+            binding:onClick="Salvar" />
+			<!-- binding:onClick > Ao clicar neste botão, o comando Salvar da ViewModel deve ser executado -->
+
+        <Button
+            android:id="@+id/exluir"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/ambiente_cadastro_excluir"
+            binding:visibility="Edicao"
+            binding:onClick="Excluir" />
+        	<!-- binding:visibility > Este botão só deve ser exibido quando se tratar de uma atualização -->
+			<!-- binding:onClick > Ao clicar neste botão, o comando Excluir da ViewModel deve ser executado -->
+        
+        <Button
+            android:id="@+id/cancelar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/ambiente_cadastro_cancelar"
+            binding:onClick="Cancelar"  />
+        	<!-- binding:onClick > Ao clicar neste botão, o comando Cancelar da ViewModel deve ser executado -->
+        
+    </LinearLayout>
+
+</LinearLayout>
