@@ -5,10 +5,42 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/button1"
+    <CheckBox
+        android:id="@+id/chkGesso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Listando Servicos Gesso/Pintura/ Etc..." />
-
+        android:text="@string/chk_gesso" />
+ 
+    <CheckBox
+        android:id="@+id/chkPintura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chk_pintura"
+        android:checked="true" />
+ 
+    <CheckBox
+        android:id="@+id/chkAcabamentoParede"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chk_acabamento_parede" />
+    
+    <CheckBox
+        android:id="@+id/chkAcabamentoJanela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chk_acabamento_janela"
+        android:checked="true" />
+ 
+    <CheckBox
+        android:id="@+id/chkAcabamentoPorta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chk_acabamento_porta" />
+    
+    <Button
+        android:id="@+id/btnDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_display" />
+    
 </LinearLayout>    

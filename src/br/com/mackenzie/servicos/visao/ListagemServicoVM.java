@@ -29,4 +29,8 @@ public class ListagemServicoVM {
 	public ListagemServicoVM(Servico servico, Context contexto) {
 		this.contexto = contexto;
 	}	
+	
+	
+	
+	
 }

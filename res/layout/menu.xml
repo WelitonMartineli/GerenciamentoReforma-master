@@ -1,28 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:binding="http://www.gueei.com/android-binding/"    
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://www.gueei.com/android-binding/"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal" >
 
-        <Button
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" >
+
+        <ImageView
             android:id="@+id/ambientes"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/menu_ambientes"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_ambientes"
             binding:onClick="Ambientes" />
-			<!-- binding:onClick > Ao clicar neste botão, o comando Salvar da ViewModel deve ser executado -->
- 
-        <Button
+        <!-- binding:onClick > Ao clicar neste botão, o comando Salvar da ViewModel deve ser executado -->
+
+        <ImageView
             android:id="@+id/servicos"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/menu_servicos"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_servicos"
             binding:onClick="Servicos" />
-			<!-- binding:onClick > Ao clicar neste botão, o comando Salvar da ViewModel deve ser executado -->
- 
-    
-    
-</LinearLayout>
+        <!-- binding:onClick > Ao clicar neste botão, o comando Salvar da ViewModel deve ser executado -->
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ambientes"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Servicos"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </TableRow>
+
+</TableLayout>

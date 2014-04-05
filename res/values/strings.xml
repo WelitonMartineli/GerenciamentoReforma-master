@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">GerenciamentoReforma</string>
+    <string name="app_name">Gerenciar Reforma</string>
     
     <string name="ambiente_lista_nome_ambiente">Nome do ambiente</string>
     <string name="ambiente_lista_adicionar">Adicionar</string>
@@ -33,4 +33,12 @@
     <string name="menu_ambientes">Ambientes</string>
     <string name="menu_servicos">Servicos</string>
     
+    <string name="chk_gesso">Gesso</string>
+    <string name="chk_pintura">Pintura</string>
+    <string name="chk_acabamento_parede">Acabamento Parede</string> 
+    <string name="chk_acabamento_janela">Acabamento Janela</string>
+    <string name="chk_acabamento_porta">Acabamento Porta</string>    
+    <string name="btn_display">Display</string>    
+   
+     
 </resources>
