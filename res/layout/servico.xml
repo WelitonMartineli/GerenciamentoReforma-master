@@ -2,23 +2,46 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:binding="http://www.gueei.com/android-binding/"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical" >
-
-    <Button
-        android:id="@+id/button1"
+    
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Adicionar servicos ao ambiente" />
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@android:color/holo_orange_dark">
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Adicionar Servicos ao Ambiente"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/white" />
+
+        </TableRow>
+        
+    </TableLayout>
 
     <ListView
         android:id="@+id/listaAmbientes"
         android:layout_width="match_parent"
         android:layout_height="303dp"
+        android:layout_weight="6.71"
         binding:clickedItem="ItemSelecionado"
         binding:itemSource="Ambientes"
         binding:itemTemplate="@layout/ambiente_lista_item"
         binding:onItemClicked="Selecionar" >
+
     </ListView>
 
 </LinearLayout>

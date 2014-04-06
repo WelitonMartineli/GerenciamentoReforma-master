@@ -9,7 +9,7 @@ import android.widget.Toast;
 import br.com.mackenzie.R;
 import gueei.binding.app.BindingActivity;
 
-public class ListagemServico extends BindingActivity {
+public class ListagemServico extends BindingActivity implements View.OnClickListener {
 	
 	
 	private CheckBox chkGesso, chkPintura, chkAcabamentoParede, chkAcabamentoPorta, chkAcabamentoJanela;
@@ -23,57 +23,35 @@ public class ListagemServico extends BindingActivity {
 		// AssociaÁ„o entre layout e ViewModel conforme vers„o antiga do framework (quando herdado de BindingActivity).
 		//setAndBindRootView(R.layout.listagem_servico, new ListagemServicoVM(this));//new ServicoVM(servico, this));
 		setContentView(R.layout.listagem_servico);
-		addListenerOnChkIos();
-		addListenerOnButton();
+		
+		chkGesso = (CheckBox) findViewById(R.id.chkGesso);
+		chkPintura = (CheckBox) findViewById(R.id.chkPintura);
+		chkAcabamentoParede = (CheckBox) findViewById(R.id.chkAcabamentoParede);
+		chkAcabamentoPorta = (CheckBox) findViewById(R.id.chkAcabamentoPorta);
+		chkAcabamentoJanela = (CheckBox) findViewById(R.id.chkAcabamentoJanela);
+
+
+		chkGesso.setOnClickListener(this);
+		chkPintura.setOnClickListener(this);
+		chkAcabamentoParede.setOnClickListener(this);
+		chkAcabamentoPorta.setOnClickListener(this);
+		chkAcabamentoJanela.setOnClickListener(this);
+
 
 	}
-	
-	 public void addListenerOnChkIos() {
-		 
-			chkGesso = (CheckBox) findViewById(R.id.chkGesso);
-		 
-			chkGesso.setOnClickListener(new OnClickListener() {
-		 
-			  @Override
-			  public void onClick(View v) {
-		                //is chkIos checked?
-				if (((CheckBox) v).isChecked()) {
-					Toast.makeText(ListagemServico.this,
-				 	   "Bro, try Android :)", Toast.LENGTH_LONG).show();
-				}
-		 
-			  }
-			});
-		 
-		  }
-		 
-		  public void addListenerOnButton() {
-		 
-			chkGesso = (CheckBox) findViewById(R.id.chkGesso);
-			chkPintura = (CheckBox) findViewById(R.id.chkPintura);
-			chkAcabamentoParede = (CheckBox) findViewById(R.id.chkAcabamentoParede);
-			chkAcabamentoPorta = (CheckBox) findViewById(R.id.chkAcabamentoPorta);
-			chkAcabamentoJanela = (CheckBox) findViewById(R.id.chkAcabamentoJanela);
-			btnDisplay = (Button) findViewById(R.id.btnDisplay);
-		 
-			btnDisplay.setOnClickListener(new OnClickListener() {
-		 
-		          //Run when button is clicked
-			  @Override
-			  public void onClick(View v) {
-		 
-				StringBuffer result = new StringBuffer();
-				result.append("Gesso check : ").append(chkGesso.isChecked());
-				result.append("\nPintura check : ").append(chkPintura.isChecked());
-				result.append("\nAcabamento Parede check :").append(chkAcabamentoParede.isChecked());
-				result.append("\nAcabamento Porta check : ").append(chkAcabamentoPorta.isChecked());
-				result.append("\nAcabamento Janela check :").append(chkAcabamentoJanela.isChecked());
-		 
-				Toast.makeText(ListagemServico.this, result.toString(),
+
+	@Override
+	public void onClick(View view) {
+			
+		CheckBox t = (CheckBox) view;
+			
+		if(t.isChecked()){
+			Toast.makeText(ListagemServico.this, "Serviço Incluído!",
 						Toast.LENGTH_LONG).show();
-		 
-			  }
-			});	
-		  }
+		}else{
+			Toast.makeText(ListagemServico.this, "Serviço Excluído!",
+						Toast.LENGTH_LONG).show();
+		}
+	}
 	
 }

@@ -1,14 +1,21 @@
 package br.com.mackenzie.servicos.visao;
 
 import gueei.binding.collections.CursorCollection;
+import br.com.mackenzie.R;
 import br.com.mackenzie.ambiente.visao.ItemAmbienteVM;
 import android.content.Context;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.Toast;
 
 public class ListagemServicoVM {
 	
 	private Context contexto;	
 	// Coleção de cursores de ambientes.
 	public CursorCollection<ItemAmbienteVM> Ambientes = new CursorCollection<ItemAmbienteVM>(ItemAmbienteVM.class);	
+	
 	
 
 	
@@ -22,8 +29,7 @@ public class ListagemServicoVM {
 	public ListagemServicoVM(Context contexto) {
 		this.contexto = contexto;
 				
-		// Recupera os dados do banco e preenche a coleção de cursores.
-		//preencherLista();		
+	
 	}		
 	
 	public ListagemServicoVM(Servico servico, Context contexto) {
@@ -31,6 +37,6 @@ public class ListagemServicoVM {
 	}	
 	
 	
-	
+
 	
 }

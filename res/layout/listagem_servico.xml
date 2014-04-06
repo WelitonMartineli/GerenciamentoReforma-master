@@ -4,43 +4,118 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
+    
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:background="@android:color/holo_orange_dark">
 
-    <CheckBox
-        android:id="@+id/chkGesso"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/chk_gesso" />
- 
-    <CheckBox
-        android:id="@+id/chkPintura"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/chk_pintura"
-        android:checked="true" />
- 
-    <CheckBox
-        android:id="@+id/chkAcabamentoParede"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/chk_acabamento_parede" />
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Adicionar Servicos"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/white" />
+	
+        </TableRow>
+
+    </TableLayout>    
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
     
-    <CheckBox
-        android:id="@+id/chkAcabamentoJanela"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/chk_acabamento_janela"
-        android:checked="true" />
- 
-    <CheckBox
-        android:id="@+id/chkAcabamentoPorta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/chk_acabamento_porta" />
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            
+		    <CheckBox
+		        android:id="@+id/chkGesso"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:layout_weight="1"
+		        android:text="@string/chk_gesso" />
+            
+        </TableRow>
+            
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+		    
+		    <CheckBox
+		        android:id="@+id/chkPintura"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:layout_weight="1"
+		        android:checked="true"
+		        android:text="@string/chk_pintura" />
+                         
+        </TableRow>
+        
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+		    
+		    <CheckBox
+		        android:id="@+id/chkAcabamentoParede"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:layout_weight="1"
+		        android:text="@string/chk_acabamento_parede" />
+            		               
+        </TableRow>
+        
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+		    
+		    <CheckBox
+		        android:id="@+id/chkAcabamentoJanela"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:layout_weight="1"
+		        android:checked="true"
+		        android:text="@string/chk_acabamento_janela" />
+            
+        </TableRow>
+        
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <CheckBox
+                android:id="@+id/chkAcabamentoPorta"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/chk_acabamento_porta" />
+            
+        </TableRow>
+        
+    </TableLayout>
     
-    <Button
-        android:id="@+id/btnDisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_display" />
     
 </LinearLayout>    

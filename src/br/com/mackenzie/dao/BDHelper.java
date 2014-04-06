@@ -27,6 +27,7 @@ public class BDHelper extends SQLiteOpenHelper {
 	// *****************************************************
 	// Definições da tabela de ambientes.
 	public static final String AmbienteTabela = "ambiente";
+	public static final String ServicoAmbienteTabela = "servico_ambiente";
 
 	public static enum AmbienteColunas {
 		ID("id"), NOME("nome"), PORTA("porta"), JANELA("janela"), METRAGEM("metragem");
@@ -41,6 +42,20 @@ public class BDHelper extends SQLiteOpenHelper {
 		}
 	}
 
+	public static enum ServicoAmbienteColunas {
+		ID("id"), ID_AMBIENTE("id_ambiente"), COD_SERVICO("cod_servico"), DES_SERVICO("des_servico");
+		private final String nome;
+
+		ServicoAmbienteColunas(String nome) {
+			this.nome = nome;
+		}
+
+		public String nome() {
+			return this.nome;
+		}
+	}	
+	
+	
 	private static final String AmbienteSQLCriacao = "CREATE TABLE "
 			+ AmbienteTabela + " (" + AmbienteColunas.ID.nome()
 			+ " INTEGER PRIMARY KEY AUTOINCREMENT, "
@@ -48,6 +63,16 @@ public class BDHelper extends SQLiteOpenHelper {
 			+ AmbienteColunas.PORTA.nome() + " INTEGER, "
 			+ AmbienteColunas.JANELA.nome() + " INTEGER, "
 			+ AmbienteColunas.METRAGEM.nome() + " INTEGER NOT NULL);";
+	
+	private static final String ServicoAmbienteSQLCriacao = "CREATE TABLE "
+			+ ServicoAmbienteTabela + " (" + ServicoAmbienteColunas.ID.nome()
+			+ " INTEGER PRIMARY KEY AUTOINCREMENT, "
+			+ ServicoAmbienteColunas.ID_AMBIENTE.nome() + " INTEGER NOT NULL, "
+			+ ServicoAmbienteColunas.COD_SERVICO.nome() + " TEXT NOT NULL, "
+			+ ServicoAmbienteColunas.DES_SERVICO.nome() + " TEXT NOT NULL"
+			+ " FOREIGN KEY(id_ambiente) REFERENCES ambiente(id) " +
+					");";
+	
 
 	/**
 	 * Cria um novo objeto da classe para o contexto de aplicação especificado
@@ -118,12 +143,14 @@ public class BDHelper extends SQLiteOpenHelper {
 	public void onCreate(SQLiteDatabase banco) { // Cria o banco, caso ele não exista.
 		// Cria a tabela de ambientes.
 		banco.execSQL(AmbienteSQLCriacao);
+		banco.execSQL(ServicoAmbienteSQLCriacao);
 	}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase banco, int versaoAnterior,
 			int novaVersao) { // Atualiza o banco, caso a versão dele tenha sido alterada.
 		banco.execSQL("DROP TABLE IF EXISTS " + AmbienteTabela);
+		banco.execSQL("DROP TABLE IF EXISTS " + ServicoAmbienteTabela);
 		onCreate(banco);
 	}
 
