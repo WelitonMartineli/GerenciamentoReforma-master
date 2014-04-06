@@ -9,6 +9,7 @@
         android:id="@+id/labelNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_orange_dark"
         android:text="@string/ambiente_cadastro_nome" />
 
     <EditText
@@ -27,6 +28,7 @@
         android:id="@+id/labelPorta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_orange_dark"
         android:text="@string/ambiente_cadastro_porta" />
 
     <EditText
@@ -42,6 +44,7 @@
         android:id="@+id/labelJanela"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_orange_dark"
         android:text="@string/ambiente_cadastro_janela" />		
     
     <EditText
@@ -57,7 +60,9 @@
         android:id="@+id/labelMetragem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/ambiente_cadastro_metragem" />		
+        android:text="@string/ambiente_cadastro_metragem" 
+        android:textColor="@android:color/holo_orange_dark"        
+        />		
     
     <EditText
         android:id="@+id/metragem"
@@ -78,6 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/ambiente_cadastro_salvar"
+            android:textColor="@android:color/holo_orange_dark"
             binding:onClick="Salvar" />
 			<!-- binding:onClick > Ao clicar neste botão, o comando Salvar da ViewModel deve ser executado -->
 
@@ -85,10 +91,12 @@
             android:id="@+id/exluir"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0.87"
             android:text="@string/ambiente_cadastro_excluir"
-            binding:visibility="Edicao"
-            binding:onClick="Excluir" />
+            android:textColor="@android:color/holo_orange_dark"
+            binding:onClick="Excluir"
+            binding:visibility="Edicao" />
+
         	<!-- binding:visibility > Este botão só deve ser exibido quando se tratar de uma atualização -->
 			<!-- binding:onClick > Ao clicar neste botão, o comando Excluir da ViewModel deve ser executado -->
         
@@ -98,6 +106,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/ambiente_cadastro_cancelar"
+            android:textColor="@android:color/holo_orange_dark"
             binding:onClick="Cancelar"  />
         	<!-- binding:onClick > Ao clicar neste botão, o comando Cancelar da ViewModel deve ser executado -->
         

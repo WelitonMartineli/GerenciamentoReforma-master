@@ -1,32 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:binding="http://www.gueei.com/android-binding/"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/adicionar"
-        style="?android:attr/buttonStyleSmall"
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/ambiente_lista_adicionar"
-        binding:onClick="Adicionar" />
-    	<!-- binding:onClick > Ao clicar neste botão, o formulário de cadastro de novos ambientes será exibido -->
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/holo_orange_dark">
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Adicionar"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <ImageView
+                android:id="@+id/adicionar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/add_list"
+                binding:onClick="Adicionar" />
+        </TableRow>
+    </TableLayout>
+
+    <!-- binding:onClick > Ao clicar neste botão, o formulário de cadastro de novos ambientes será exibido -->
 
     <ListView
         android:id="@+id/listaAmbientes"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="426dp"
+        android:layout_weight="1"
+        binding:clickedItem="ItemSelecionado"
         binding:itemSource="Ambientes"
         binding:itemTemplate="@layout/ambiente_lista_item"
-    	binding:onItemClicked="Selecionar"
-    	binding:clickedItem="ItemSelecionado"        
-        >
+        binding:onItemClicked="Selecionar" >
     </ListView>
-    	<!-- binding:itemSource > Nome do observável (coleção de cursores ou arraylist - da ViewModel) que contém os itens que serão exibidos na lista -->
-    	<!-- binding:itemTemplate > XML de layout para cada item da lista -->
-    	<!-- binding:onItemClicked > Quando um item for clicado, o comando "Selecionar" (da ViewModel) será executado -->
-    	<!-- binding:clickedItem > O item atualmente selecionado na lista é armazenado no observável ItemSelecionado (da ViewModel) -->
+
+    <!-- binding:itemSource > Nome do observável (coleção de cursores ou arraylist - da ViewModel) que contém os itens que serão exibidos na lista -->
+    <!-- binding:itemTemplate > XML de layout para cada item da lista -->
+    <!-- binding:onItemClicked > Quando um item for clicado, o comando "Selecionar" (da ViewModel) será executado -->
+    <!-- binding:clickedItem > O item atualmente selecionado na lista é armazenado no observável ItemSelecionado (da ViewModel) -->
 
 </LinearLayout>
