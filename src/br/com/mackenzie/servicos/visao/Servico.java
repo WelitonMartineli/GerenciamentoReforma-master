@@ -22,7 +22,7 @@ public class Servico extends BindingActivity {
 		//Servico servico = (Servico)bundle.getSerializable("servico");		
 		
 		// Associação entre layout e ViewModel conforme versão antiga do framework (quando herdado de BindingActivity).
-		setAndBindRootView(R.layout.servico, new ServicoVM(this));//new ServicoVM(servico, this));
+		setAndBindRootView(R.layout.servico, new ServicoVM(getApplicationContext()));//new ServicoVM(servico, this));
 		
 		
 		// Cria a ViewModel e a associa ao layout.

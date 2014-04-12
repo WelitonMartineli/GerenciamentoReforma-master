@@ -22,7 +22,7 @@ public class BDHelper extends SQLiteOpenHelper {
 	// Nome do banco de dados.
 	private static final String NOME_BANCO = "imovel.bd";
 	// Versão do banco.
-	private static final int VERSAO = 2;
+	private static final int VERSAO = 4;
 
 	// *****************************************************
 	// Definições da tabela de ambientes.
@@ -66,12 +66,12 @@ public class BDHelper extends SQLiteOpenHelper {
 	
 	private static final String ServicoAmbienteSQLCriacao = "CREATE TABLE "
 			+ ServicoAmbienteTabela + " (" + ServicoAmbienteColunas.ID.nome()
-			+ " INTEGER PRIMARY KEY AUTOINCREMENT, "
+			+ " INTEGER NOT NULL, " //PRIMARY KEY AUTOINCREMENT, "
 			+ ServicoAmbienteColunas.ID_AMBIENTE.nome() + " INTEGER NOT NULL, "
 			+ ServicoAmbienteColunas.COD_SERVICO.nome() + " TEXT NOT NULL, "
-			+ ServicoAmbienteColunas.DES_SERVICO.nome() + " TEXT NOT NULL"
-			+ " FOREIGN KEY(id_ambiente) REFERENCES ambiente(id) " +
-					");";
+			+ ServicoAmbienteColunas.DES_SERVICO.nome() + " TEXT NOT NULL);";
+			//+ " FOREIGN KEY(id_ambiente) REFERENCES ambiente(id) " +
+			//		");";
 	
 
 	/**

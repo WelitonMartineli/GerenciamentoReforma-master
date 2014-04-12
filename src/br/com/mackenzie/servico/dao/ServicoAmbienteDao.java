@@ -38,9 +38,12 @@ public class ServicoAmbienteDao {
 	public static boolean inserir(ServicoAmbiente servicoAmbiente) {
 		// Tenta inserir os dados no banco.
 		ContentValues valores = new ContentValues();
+		valores.put(BDHelper.ServicoAmbienteColunas.ID.nome(), servicoAmbiente.getId());
 		valores.put(BDHelper.ServicoAmbienteColunas.COD_SERVICO.nome(), servicoAmbiente.getCodServico());
 		valores.put(BDHelper.ServicoAmbienteColunas.DES_SERVICO.nome(),
 				servicoAmbiente.getDesServico());
+		valores.put(BDHelper.ServicoAmbienteColunas.ID_AMBIENTE.nome(),
+				servicoAmbiente.getIdAmbiente());
 		long resultado = BDHelper.getInstance().getBanco()
 				.insert(BDHelper.ServicoAmbienteTabela, null, valores);
 		// Retorna o resultado da inserção.
@@ -107,6 +110,21 @@ public class ServicoAmbienteDao {
 					+ " não foi excluído!");
 			return false;
 		}
+	}
+
+	public static boolean findByServicoAmbientebyIDs(ServicoAmbiente servicoAmbiente) {
+		
+		Cursor result = BDHelper
+		.getInstance()
+		.getBanco().rawQuery("select id, id_ambiente from servico_ambiente where id = " + servicoAmbiente.getId() +
+				             " and id_ambiente = " + servicoAmbiente.getIdAmbiente(), null);
+
+		
+		if (result.getCount() > 0 ){
+			return true;
+		}
+		
+		return false;
 	}	
 	
 }

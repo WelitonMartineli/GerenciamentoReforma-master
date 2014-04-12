@@ -13,7 +13,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView.FindListener;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class ServicoVM {
@@ -21,7 +23,7 @@ public class ServicoVM {
 	private Context contexto;	
 	// Coleção de cursores de ambientes.
 	public CursorCollection<ItemAmbienteVM> Ambientes = new CursorCollection<ItemAmbienteVM>(ItemAmbienteVM.class);	
-	
+	public final Observable<Object> ItemSelecionado = new Observable<Object>(Object.class);
 
 	
 	/**
@@ -53,9 +55,24 @@ public class ServicoVM {
 	public Command Selecionar = new Command() {
 		@Override
 		public void Invoke(View visao, Object... argumentos) {
-			
+
 			Intent intencao = new Intent(visao.getContext(),
 					ListagemServico.class);
+			
+			//Recuperando o id do Ambiente, para adicionar os servicos ligados ao ambiente
+			ItemAmbienteVM itemSelecionado = ((ItemAmbienteVM)ItemSelecionado.get());
+
+			Ambiente ambiente = new Ambiente();
+			ambiente.setId((int)itemSelecionado.Id.get().longValue());
+			ambiente.setNome(itemSelecionado.Nome.get());
+			ambiente.setPorta(itemSelecionado.Porta.get());
+			ambiente.setJanela(itemSelecionado.Janela.get());			
+			ambiente.setMetragem(itemSelecionado.Metragem.get());
+
+			Bundle parametros = new Bundle();			
+			parametros.putSerializable("ambiente", ambiente);
+			
+			intencao.putExtras(parametros);			
 			visao.getContext().startActivity(intencao);
 		}	
 			
