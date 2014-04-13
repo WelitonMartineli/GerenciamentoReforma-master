@@ -35,7 +35,7 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.6"
         >
     
         <TableRow
@@ -46,7 +46,7 @@
             android:background="@android:color/black" >
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/tituloAmbiente"
                 android:layout_width="143dp"
                 android:layout_height="47dp"
                 android:layout_weight="1"
@@ -55,7 +55,7 @@
                 android:textColor="@android:color/white" />
 
             <TextView
-                android:id="@+id/editText1"
+                android:id="@+id/extratoAmbiente"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="top"
@@ -76,7 +76,7 @@
             android:background="@android:color/black" >
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/tituloAreaCalculada"
                 android:layout_width="143dp"
                 android:layout_height="47dp"
                 android:layout_weight="1"
@@ -85,7 +85,7 @@
                 android:textColor="@android:color/white" />
 
             <TextView
-                android:id="@+id/editText1"
+                android:id="@+id/extratoAreaCalculada"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="top"
@@ -136,18 +136,19 @@
         <TableRow
             android:id="@+id/tableRow1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@android:color/black" >
+            android:background="@android:color/white" >
 
+            <ListView
+                android:id="@+id/listExtratoServicos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:textColor="@android:color/white" >
 
-	        <ScrollView
-	            android:id="@+id/scrollView1"
-	            android:layout_width="match_parent"
-	            android:layout_height="wrap_content"
-	            android:textColor="@android:color/white"  >
-
-	        </ScrollView>
+            </ListView>
 
         </TableRow>
         
@@ -184,13 +185,14 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.3"
         >
     
         <TableRow
             android:id="@+id/tableRow1"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
             android:layout_weight="1"
             android:background="@android:color/black" >
 
@@ -198,7 +200,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_gravity="clip_horizontal"
+                android:layout_gravity="center"
                 android:layout_weight="1"
                 android:text="Total: "
                 android:textAppearance="?android:attr/textAppearanceMedium"
@@ -206,9 +208,9 @@
 
             <TextView
                 android:id="@+id/editText1"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_gravity="end"
                 android:ems="10"
                 android:inputType="number"
                 android:textColor="@android:color/white" >
