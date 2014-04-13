@@ -1,8 +1,11 @@
 package br.com.mackenzie.servico.dao;
 
+import java.util.ArrayList;
+
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.util.Log;
+import br.com.mackenzie.ambiente.modelo.Ambiente;
 import br.com.mackenzie.dao.BDHelper;
 import br.com.mackenzie.servico.modelo.ServicoAmbiente;
 
@@ -125,6 +128,24 @@ public class ServicoAmbienteDao {
 		}
 		
 		return false;
+	}
+
+	public static String[] listarTodosServicos(Ambiente ambiente) {
+		
+		Cursor result = BDHelper
+		.getInstance()
+		.getBanco().rawQuery("select des_servico from servico_ambiente where id_ambiente = " + ambiente.getId(), null);
+
+		result.moveToFirst();
+	    ArrayList<String> names = new ArrayList<String>();
+	    while(!result.isAfterLast()) {
+	        names.add(result.getString(result.getColumnIndex("des_servico")));
+	        result.moveToNext();
+	    }
+	    result.close();
+	    
+	    return (String[]) names.toArray(new String[0]);
+		
 	}	
 	
 }

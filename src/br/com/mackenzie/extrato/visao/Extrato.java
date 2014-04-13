@@ -1,13 +1,17 @@
 package br.com.mackenzie.extrato.visao;
 
 
+import java.math.BigDecimal;
+
 import gueei.binding.app.BindingActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Switch;
 import android.widget.TextView;
 import br.com.mackenzie.R;
 import br.com.mackenzie.ambiente.modelo.Ambiente;
+import br.com.mackenzie.servico.dao.ServicoAmbienteDao;
 
 public class Extrato extends BindingActivity {
 	
@@ -16,6 +20,7 @@ public class Extrato extends BindingActivity {
 	private TextView descricaoAmbiente;
 	private TextView areaCalculada;
 	private ListView listExtratoServico;
+	private TextView totalGeral;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,19 +41,9 @@ public class Extrato extends BindingActivity {
 
 		//Setando extrato servico
 		listExtratoServico = (ListView) findViewById(R.id.listExtratoServicos); 
-		
-		
-		//ServicoAmbienteDao.listarTodosServicos();
-        // Defined Array values to show in ListView
-        String[] values = new String[] { "Android List View", 
-                                         "Adapter implementation",
-                                         "Simple List View In Android",
-                                         "Create List View Android", 
-                                         "Android Example", 
-                                         "List View Source Code", 
-                                         "List View Array Adapter", 
-                                         "Android Example List View" 
-                                        };
+			
+		String[] values = ServicoAmbienteDao.listarTodosServicos(this.ambiente);
+
 		
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 	              android.R.layout.simple_list_item_1, android.R.id.text1, values);
@@ -57,6 +52,32 @@ public class Extrato extends BindingActivity {
 		listExtratoServico.setAdapter(adapter); 
 		
 		
+		totalGeral = (TextView) findViewById(R.id.textValorTotal);
+		
+		String total = getValorTotal(ambiente, values).toString();
+		totalGeral.setText(total);
+		
+		
 	}
 
+	
+	//TODO: Esse metodo simula o calculo dos servicos para o ambiente.
+	private BigDecimal getValorTotal(Ambiente ambiente, String[] qtdServicos){
+		
+		BigDecimal total;
+		BigDecimal areaCalculada = new BigDecimal(ambiente.getMetragem());
+		BigDecimal valorExterno = new BigDecimal(345);
+		BigDecimal servicos = new BigDecimal(qtdServicos != null ?qtdServicos.length: 0);
+
+		//Find nos servicos cadastrados
+		//calcular preco dos sevicos via api externa
+		
+		// Simular valores.
+		total = areaCalculada.multiply(valorExterno.multiply(servicos));
+		
+		
+		return total;
+		
+	}
+	
 }

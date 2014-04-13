@@ -29,7 +29,6 @@ public final class R {
         public static final int chkAcabamentoPorta=0x7f07001b;
         public static final int chkGesso=0x7f070017;
         public static final int chkPintura=0x7f070018;
-        public static final int editText1=0x7f070016;
         public static final int exluir=0x7f070009;
         public static final int extratoAmbiente=0x7f070011;
         public static final int extratoAreaCalculada=0x7f070013;
@@ -50,6 +49,7 @@ public final class R {
         public static final int tableRow1=0x7f07000b;
         public static final int tableRow2=0x7f070021;
         public static final int tableRow3=0x7f07001d;
+        public static final int textValorTotal=0x7f070016;
         public static final int textView1=0x7f07000c;
         public static final int textView2=0x7f070015;
         public static final int tituloAmbiente=0x7f070010;
