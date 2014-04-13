@@ -36,6 +36,8 @@
         <activity android:name="br.com.mackenzie.servicos.visao.Servico"></activity>
         <activity android:name="br.com.mackenzie.servicos.visao.ListagemServico"></activity>
         <activity android:name="br.com.mackenzie.extrato.visao.Extrato"></activity>
+        <activity android:name="br.com.mackenzie.upload.visao.DisplayImageActivity"></activity>
+        <activity android:name="br.com.mackenzie.upload.visao.SQLiteDemoActivity"></activity>
     </application>
 
 </manifest>

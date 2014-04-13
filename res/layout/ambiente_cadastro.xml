@@ -73,6 +73,16 @@
         binding:text="Metragem" />
     	<!-- binding:text > O conteúdo do observável Quantidade deve estar vinculado a esta caixa de texto -->
 
+    <Button
+		android:id="@+id/addImagem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ambiente_cadastro_imagem"
+        android:textColor="@android:color/white"
+        android:background="@android:color/black"
+        binding:onClick="Imagem" />
+		<!-- binding:onClick > Ao clicar neste botão, o comando Salvar da ViewModel deve ser executado -->
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" >

@@ -7,19 +7,14 @@ import gueei.binding.labs.validation.validators.MaxLength;
 import gueei.binding.labs.validation.validators.MinLength;
 import gueei.binding.labs.validation.validators.Required;
 import gueei.binding.observables.BooleanObservable;
-import gueei.binding.observables.IntegerObservable;
-import gueei.binding.observables.LongObservable;
 import gueei.binding.observables.StringObservable;
-
-import java.util.Date;
-
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.widget.Toast;
 import br.com.mackenzie.R;
 import br.com.mackenzie.ambiente.dao.AmbienteDao;
 import br.com.mackenzie.ambiente.modelo.Ambiente;
+import br.com.mackenzie.upload.visao.SQLiteDemoActivity;
 
 /**
  * Esta classe implementa uma ViewModel para a funcionalidade de cadastro e
@@ -204,5 +199,17 @@ public class AmbienteCadastroVM {
 				ListagemAmbientes.class);
 		contexto.startActivity(intencao);
 	}
+	
+	public Command Imagem = new Command() {
+		public void Invoke(android.view.View visao, Object... parametros) {
+			//AmbienteDao.excluir(new Ambiente(id));
+			// Exibe uma mensagem de exclusão realizada com sucesso.
+			Intent intencao = new Intent(visao.getContext(),
+					SQLiteDemoActivity.class);
+			visao.getContext().startActivity(intencao);
+		};
+	};
+	
+	
 	
 }

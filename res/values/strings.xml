@@ -9,7 +9,7 @@
     <string name="ambiente_lista_item_aviso_cuidados">Verificar antes de vender</string>
     
     <string name="listagem_ambientes_titulo">Ambientes</string>
-   
+    <string name="hello">Hello World, SQLiteDemoActivity!</string> 
     <!-- Cadastro de ambientes -->
     <string name="ambiente_edicao_titulo">Edição de Ambientes</string>
     <string name="ambiente_cadastro_titulo">Cadastro de Ambientes</string>
@@ -24,6 +24,7 @@
     <string name="ambiente_cadastro_atualizado_sucesso">O ambiente foi atualizado com sucesso.</string>
     <string name="ambiente_cadastro_data_vencimento">Data de Validade:</string>
     <string name="ambiente_cadastro_salvar">Salvar</string>
+    <string name="ambiente_cadastro_imagem">Imagem</string>
     <string name="ambiente_cadastro_cancelar">Cancelar</string>
     <string name="ambiente_cadastro_descricao_erro">A descrição pode ter no máximo 300 caracteres.</string>
     <string name="ambiente_cadastro_quantidade_erro">A quantidade é obrigatória.</string>
