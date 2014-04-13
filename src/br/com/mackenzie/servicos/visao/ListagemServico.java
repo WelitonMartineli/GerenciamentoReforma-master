@@ -97,9 +97,15 @@ public class ListagemServico extends BindingActivity implements View.OnClickList
 
 
 		} else {
-		
+
 			Intent intencao = new Intent(view.getContext(),
-					Extrato.class);
+					Extrato.class);			
+			
+			Bundle parametros = new Bundle();			
+			parametros.putSerializable("ambiente", ambiente);
+			
+			intencao.putExtras(parametros);						
+			
 			view.getContext().startActivity(intencao);
 		}
 		

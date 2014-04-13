@@ -3,6 +3,238 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
 
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:background="@android:color/holo_orange_dark">
+        
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1" >
+    
+		    <TextView
+		        android:id="@+id/textView1"
+		        android:layout_width="0dp"
+		        android:layout_height="wrap_content"
+		        android:text="Extrato Ambiente"
+		        android:layout_gravity="center"
+		        android:layout_weight="1"    
+		        android:gravity="center"    
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:textColor="@android:color/white" />
+
+        </TableRow>
+
+    </TableLayout>		    
+		    
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+    
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@android:color/black" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="143dp"
+                android:layout_height="47dp"
+                android:layout_weight="1"
+                android:text="Ambiente: "
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/editText1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="text"
+                android:textColor="@android:color/white" >
+
+                <requestFocus />
+            </TextView>
+        </TableRow>        
+        
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@android:color/black" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="143dp"
+                android:layout_height="47dp"
+                android:layout_weight="1"
+                android:text="Area calculada m2: "
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/editText1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:textColor="@android:color/white" >
+
+                <requestFocus />
+            </TextView>
+        </TableRow>
+        
+    </TableLayout>   
+    
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:background="@android:color/holo_orange_dark">
+        
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1" >
+    
+		    <TextView
+		        android:id="@+id/textView1"
+		        android:layout_width="0dp"
+		        android:layout_height="wrap_content"
+		        android:text="Extrato Servicos"
+		        android:layout_gravity="center"
+		        android:layout_weight="1"    
+		        android:gravity="center"    
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:textColor="@android:color/white" />
+
+        </TableRow>
+
+    </TableLayout>		    
+    
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/black" >
+
+
+	        <ScrollView
+	            android:id="@+id/scrollView1"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:textColor="@android:color/white"  >
+
+	        </ScrollView>
+
+        </TableRow>
+        
+    </TableLayout>
+    
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:background="@android:color/holo_orange_dark">
+        
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1" >
+    
+		    <TextView
+		        android:id="@+id/textView1"
+		        android:layout_width="0dp"
+		        android:layout_height="wrap_content"
+		        android:text="Total Geral"
+		        android:layout_gravity="center"
+		        android:layout_weight="1"    
+		        android:gravity="center"    
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:textColor="@android:color/white" />
+
+        </TableRow>
+
+    </TableLayout>    
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+    
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@android:color/black" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="clip_horizontal"
+                android:layout_weight="1"
+                android:text="Total: "
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/editText1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:textColor="@android:color/white" >
+
+                <requestFocus />
+            </TextView>
+        </TableRow>
+        
+    </TableLayout>   
+
+    
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:background="@android:color/holo_orange_dark"
+        >
+    
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+    
+         </TableRow>
+        
+    </TableLayout>     
+    
 </LinearLayout>
