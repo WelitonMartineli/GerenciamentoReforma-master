@@ -13,9 +13,6 @@ import android.widget.DatePicker;
  * createViewAttribute, que verifica se o nome do atributo é "valor" e, em caso
  * afirmativo, retorna um novo atributo.
  * 
- * @author Leandro Luque, Érico Veriscimo, Girdácio Pereira
- * @version 1.0
- * @since 1.0
  */
 public class BindableDatePicker extends DatePicker implements
 		IBindableView<BindableDatePicker> {

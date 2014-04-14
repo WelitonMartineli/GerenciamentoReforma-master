@@ -10,9 +10,6 @@ import br.com.mackenzie.dao.BDHelper;
 /**
  * Esta classe define os dados que serão exibidos em cada item da lista
  * de ambientes;
- * @author Leandro Luque, Érico Veriscimo, Girdácio Pereira
- * @version 1.0
- * @since 1.0
  */
 public class ItemAmbienteVM extends gueei.binding.cursor.RowModel {
 	
@@ -23,26 +20,5 @@ public class ItemAmbienteVM extends gueei.binding.cursor.RowModel {
 	public IntegerField Janela = new IntegerField(BDHelper.AmbienteColunas.JANELA.nome());
 	public IntegerField Metragem = new IntegerField(BDHelper.AmbienteColunas.METRAGEM.nome());
 
-	
-	// Observável dependente - poderia ser implementado com conversores diretamente no
-	// XML do item.
-/*	public DependentObservable<Boolean> AbaixoLimiteEstoque = new DependentObservable<Boolean>(Boolean.class, Quantidade) {		
-		@Override
-		public Boolean calculateValue(Object... observaveis) throws Exception {
-			if((Integer)observaveis[0] < 15) {
-				return true;
-			}
-			return false;
-		}
-	};*/
-
-	// Observável dependente - poderia ser implementado com conversores diretamente no
-	// XML do item.	
-//	public DependentObservable<Boolean> CuidadoNaVenda = new DependentObservable<Boolean>(Boolean.class, Perecivel, RestricaoConsumo) {		
-//		@Override
-//		public Boolean calculateValue(Object... observaveis) throws Exception {
-//			return((Boolean)observaveis[0] || (Boolean)observaveis[1]);
-//		}		
-//	};
 	
 }

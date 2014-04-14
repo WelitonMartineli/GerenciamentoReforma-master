@@ -10,6 +10,7 @@ import gueei.binding.observables.BooleanObservable;
 import gueei.binding.observables.StringObservable;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.widget.Toast;
 import br.com.mackenzie.R;
 import br.com.mackenzie.ambiente.dao.AmbienteDao;
@@ -21,9 +22,6 @@ import br.com.mackenzie.upload.visao.SQLiteDemoActivity;
  * edição de ambientes. Nela são especificadas anotações que serão utilizadas
  * para a validação dos dados especificados pelo usuário.
  * 
- * @author Leandro Luque, Érico Veriscimo, Girdácio Pereira
- * @version 1.0
- * @since 1.0
  */
 public class AmbienteCadastroVM {
 
@@ -202,10 +200,14 @@ public class AmbienteCadastroVM {
 	
 	public Command Imagem = new Command() {
 		public void Invoke(android.view.View visao, Object... parametros) {
-			//AmbienteDao.excluir(new Ambiente(id));
-			// Exibe uma mensagem de exclusão realizada com sucesso.
+
 			Intent intencao = new Intent(visao.getContext(),
 					SQLiteDemoActivity.class);
+			
+			Bundle param = new Bundle();			
+			param.putSerializable("ambiente", ambienteEmEdicao);
+			intencao.putExtras(param);	
+			
 			visao.getContext().startActivity(intencao);
 		};
 	};

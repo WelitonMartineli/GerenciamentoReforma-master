@@ -11,9 +11,6 @@ import android.content.Context;
 @Retention(RetentionPolicy.RUNTIME)
 /**
  * Validador personalizado de e-mails.
- * @author Leandro Luque, Érico Veriscimo, Girdácio Pereira
- * @version 1.0
- * @since 1.0
  */
 public @interface Email {
 

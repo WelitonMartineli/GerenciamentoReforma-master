@@ -9,9 +9,6 @@ import android.widget.DatePicker;
  * utilizado no kernel passado por parâmetro para o método de inicialização do
  * framework.
  * 
- * @author Leandro Luque, Érico Veriscimo, Girdácio Pereira
- * @version 1.0
- * @since 1.0
  */
 public class DatePickerBindingProvider extends BindingProvider {
 

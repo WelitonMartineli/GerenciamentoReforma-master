@@ -9,9 +9,6 @@ import br.com.mackenzie.datepicker.DatePickerBindingProvider;
  * (ainda não suportador pelo framework).
  * Este kernel deve ser referenciado no processo de inicialização do framework, geralmente realizado em subclasse
  * de Application.
- * @author Leandro Luque, Érico Veriscimo, Girdácio Pereira
- * @version 1.0
- * @since 1.0
  */
 public class NovoKernel extends DefaultKernelV30 {
 

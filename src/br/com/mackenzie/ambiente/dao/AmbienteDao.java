@@ -14,9 +14,6 @@ import br.com.mackenzie.dao.BDHelper;
  * Esta classe implementa o padrão de projeto DAO (Data Access Object) para
  * ambientes. Ela é responsável por gerenciar o banco de dados de ambientes.
  * 
- * @author Leandro Luque, Érico Veriscimo, Girdácio Pereira
- * @version 1.0
- * @since 1.0
  */
 public class AmbienteDao {
 

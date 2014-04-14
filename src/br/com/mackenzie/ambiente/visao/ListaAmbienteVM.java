@@ -17,10 +17,7 @@ import br.com.mackenzie.ambiente.modelo.Ambiente;
  * uma coleção de cursores. Outra alternativa seria utilizar ArrayLists observáveis.
  * A discussão sobre vantagens e desvantagens de cada pode ser encontrada no artigo.
  * Um exemplo de uso de arraylists observáveis pode ser encontrado no código-fonte do artigo
- * de Giuliano Firmino (MundoJ n.54). 
- * @author Leandro Luque, Érico Veriscimo, Girdácio Pereira
- * @version 1.0
- * @since 1.0
+ * de Giuliano Firmino (MundoJ n.54).        
  */
 public class ListaAmbienteVM {
 
@@ -86,14 +83,6 @@ public class ListaAmbienteVM {
 			ambienteParaEdicao.setPorta(itemSelecionado.Porta.get());
 			ambienteParaEdicao.setJanela(itemSelecionado.Janela.get());			
 			ambienteParaEdicao.setMetragem(itemSelecionado.Metragem.get());
-
-//			try {
-//				ambienteParaEdicao.setDataValidade(itemSelecionado.DataValidade.get());
-//			} catch (ParseException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-
 			
 			// Cria um pacote de parâmetros para passar para a atividade de edição de ambientes.
 			Bundle parametros = new Bundle();			

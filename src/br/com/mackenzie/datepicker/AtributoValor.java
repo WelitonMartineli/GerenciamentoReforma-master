@@ -11,9 +11,6 @@ import android.widget.DatePicker.OnDateChangedListener;
  * Esta classe implementa um atributo que permitirá a vinculação do componente
  * DatePicker, ainda não suportador pelo framework.
  * 
- * @author Leandro Luque, Érico Veriscimo, Girdácio Pereira
- * @version 1.0
- * @since 1.0
  */
 public class AtributoValor extends ViewAttribute<DatePicker, Long> implements
 		OnDateChangedListener {

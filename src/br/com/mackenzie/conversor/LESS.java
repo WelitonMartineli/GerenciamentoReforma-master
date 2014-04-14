@@ -7,9 +7,6 @@ import gueei.binding.IObservable;
  * Esta classe implementa um conversor que verifica se um determinado valor é
  * inferior a outro.
  * 
- * @author Leandro Luque, Érico Veriscimo, Girdácio Pereira
- * @version 1.0
- * @since 1.0
  */
 public class LESS extends Converter<Boolean> {
 	public LESS(IObservable<?>[] dependents) {

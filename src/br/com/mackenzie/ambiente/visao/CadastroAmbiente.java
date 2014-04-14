@@ -9,9 +9,6 @@ import android.os.Bundle;
 /**
  * Esta classe implementa uma atividade de cadastro e edição de ambientes.
  * O papel desta classe é relacionar um layout XML a uma visão de modelo (ViewModel).
- * @author Leandro Luque, Érico Veriscimo, Girdácio Pereira
- * @version 1.0
- * @since 1.0
  */
                                     // Aqui pode ser herdada tanto a classe BindingActivity quanto BindingActivityV30.
 public class CadastroAmbiente extends BindingActivity  {

@@ -12,9 +12,6 @@ import br.com.mackenzie.ambiente.modelo.Ambiente;
  * de BindingActivity (V30), optamos por ilustrar aqui a implementação com a
  * versão antiga.
  * 
- * @author Leandro Luque, Érico Veriscimo, Girdácio Pereira
- * @version 1.0
- * @since 1.0
  */
 public class ListagemAmbientes extends BindingActivity {
 

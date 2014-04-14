@@ -9,12 +9,9 @@ import br.com.mackenzie.dao.BDHelper;
  * Para tanto, o arquivo AndroidManifest.xml deve ser configurado, conforme trecho de código seguinte:
  * ...
  * <application
- *       android:name="br.com.mundoj.Aplicacao"
+ *       android:name="br.com.mackenzie.Aplicacao"
  * ...
  * Desta forma, quando o processo da aplicação for criado, o método onCreate será executado.
- * @author Leandro Luque, Érico Veriscimo, Girdácio Pereira
- * @version 1.0
- * @since 1.0
  */
 public class Aplicacao extends Application {
 

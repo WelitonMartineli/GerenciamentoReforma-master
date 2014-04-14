@@ -8,9 +8,6 @@ import java.util.Date;
 
 /**
  * Esta classe implementa ambientes.
- * @author Leandro Luque, Érico Veriscimo, Girdácio Pereira
- * @version 1.0
- * @since 1.0
  */
 public class Ambiente implements Serializable {
 
@@ -68,12 +65,5 @@ public class Ambiente implements Serializable {
 	public void setMetragem(Integer metragem) {
 		this.metragem = metragem;
 	}
-	
-	// Suporte para metodos boolean
-	// Esse método é utilizado para definir se o ambiente é perecível a partir de um número inteiro
-    // armazenado em banco de dados. No SQLite, não existe suporte a tipo booleano, então,
-    // este dado foi armazenado como um número inteiro.	
-	
-
 	
 }
